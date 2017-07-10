@@ -1,0 +1,46 @@
+#button_container {
+    height: 3em;
+    margin: 1em;
+    margin-left: 0em;
+}
+
+.button {
+    background: skyblue;
+    display: inline-block;
+    height: 3em;
+    border-radius: 10px;
+}
+
+#cloning {
+    display: none;
+}
+
+body {
+    background: lavender;
+}
+
+thead {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+th {
+    text-align: center;
+}
+
+#planets_table {
+    margin: auto;
+    text-align: center;
+}
+
+tr {
+    height: 3em;
+}
+
+tr:nth-child(even) {
+    background-color: lightskyblue;
+}
+
+#planet_data_x {
+    display: none;
+}

@@ -7,21 +7,40 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
-    <script src="{{url_for('static', filename='data_handler.js')}}" defer></script>
+    <script src="{{url_for('static', filename='dataHandler.js')}}" defer></script>
     <script src="{{url_for('static', filename='dom.js')}}" defer></script>
     <script src="{{url_for('static', filename='main.js')}}" defer></script>
     <title>Star Wars</title>
 </head>
 <body>
-    <table id="planets_table">
-        <tr class="col-sm-12">
-            <th>Name</th>
-            <th>Diameter (in km)</th>
-            <th>Climate</th>
-            <th>Terrain</th>
-            <th>Surface Water Percentage</th>
-            <th>Population</th>
-            <th>Residents</th>
+    <div class="col-sm-3" id="button_container">
+    <button class="col-sm-6 button" id="previous">Previous</button>
+    <button class="col-sm-6 button" id="next">Next</button>
+    </div>
+    <table class="col-sm-12" id="planets_table">
+        <thead>
+            <tr id="planets_table_header">
+                <th class="col-sm-2">Name</th>
+                <th class="col-sm-1">Diameter (in km)</th>
+                <th class="col-sm-2">Climate</th>
+                <th class="col-sm-2">Terrain</th>
+                <th class="col-sm-1">Surface Water</th>
+                <th class="col-sm-2">Population</th>
+                <th class="col-sm-2">Residents</th>
+            </tr>
+        </thead>
+        <tbody id="planets_data">
+        </tbody>
+    </table>
+    <table id="cloning">
+        <tr id="planet_data_x">
+            <td class="col-sm-2" id="name_x">pina</td>
+            <td class="col-sm-1" id="diameter_x">pina</td>
+            <td class="col-sm-2" id="climate_x">pina</td>
+            <td class="col-sm-2" id="terrain_x">pina</td>
+            <td class="col-sm-1" id="surface_x">pina</td>
+            <td class="col-sm-2" id="population_x">pina</td>
+            <td class="col-sm-2" id="residents_x">pina</td>
         </tr>
     </table>
 
