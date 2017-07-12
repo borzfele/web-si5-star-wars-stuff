@@ -34,8 +34,18 @@ app.dom = {
             } else {
                 $("#residents_" + i).html("No residents" );
             };
-
         }
+        $(".resident").on("click", function() {
+            $("#myModal").css("display", "block");
+            residentId = event.target.id.slice(-1);
+            loadResidentsData(datasToDisplay['results'][residentId]['residents']);
+        });
+        $(".close").on("click", function() {
+            $("#myModal").css("display", "none");
+        });
+        $("#myModal").on("click", function() {
+            $("#myModal").css("display", "none");
+        });
         $("#planets_table").css('display', 'block');
         $("#planets_table").css('margin', 'auto');
         $("#next").on("click", function() {
@@ -50,5 +60,8 @@ app.dom = {
                 alert('This is the first page!')
             }
         });
+    },
+    generateModalTable : function(datasToDisplay) {
+
     }
 }

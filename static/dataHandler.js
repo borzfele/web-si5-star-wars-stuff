@@ -6,5 +6,10 @@ app.dataHandler = {
         $.getJSON(url, function(response) {
             app.dom.generateTable(response);
         });
+    },
+    getResidentsData : function(url) {
+        $.getJSON(url, function(response) {
+            app.dom.generateModalTable(response);
+        });
     }
 }
