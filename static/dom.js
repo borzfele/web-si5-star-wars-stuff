@@ -22,14 +22,14 @@ app.dom = {
                 var clonedResidentsButton = defaultResidentsButton;
                 clonedResidentsButton = clonedResidentsButton.outerHTML.replace(/x/g, i);
                 $("#residents_" + i).html(clonedResidentsButton);
-                $("#residents_" + i).css("display", "block");
+                $("#residents_" + i).css("display", "table-cell");
                 $("#residents_button_" + i).html(datasToDisplay['results'][i]['residents'].length + " resident");
             } else if (datasToDisplay['results'][i]['residents'].length > 1) {
                 var defaultResidentsButton = document.getElementById('residents_button_x');
                 var clonedResidentsButton = defaultResidentsButton;
                 clonedResidentsButton = clonedResidentsButton.outerHTML.replace(/x/g, i);
                 $("#residents_" + i).html(clonedResidentsButton);
-                $("#residents_" + i).css("display", "block");
+                $("#residents_" + i).css("display", "table-cell");
                 $("#residents_button_" + i).html(datasToDisplay['results'][i]['residents'].length + " residents" );
             } else {
                 $("#residents_" + i).html("No residents" );
@@ -39,6 +39,7 @@ app.dom = {
             $("#modal_table_body").html('');
             $("#myModal").css("display", "block");
             residentId = event.target.id.slice(-1);
+            $("#modal_header").html("Residents of " + datasToDisplay['results'][residentId]['name']);
             argsList = datasToDisplay['results'][residentId]['residents'];
             app.dataHandler.getResidentsData(argsList);
         });
