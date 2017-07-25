@@ -14,5 +14,9 @@ app.dataHandler = {
                 app.dom.generateModalTable(response);
             });
         }
+    },
+    userRegistration : function(data) {
+        $.post("/registration", data, function() {
+        });
     }
 }

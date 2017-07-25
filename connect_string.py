@@ -1,0 +1,1 @@
+connect_str = "dbname='borzfele' user='borzfele' host='localhost' password='91_december_30'"

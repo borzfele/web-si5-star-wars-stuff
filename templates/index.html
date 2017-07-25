@@ -15,6 +15,12 @@
 <body>
     <div class="col-sm-12" id="header">
         <h1>Planets of the Star Wars Universe</h1>
+        <span class="col-sm-6" id="login_box">
+            <h2>
+                <button class="col-sm-6" id="registration">Registration</button>
+                <button class="col-sm-6" id="login">Log In</button>
+            </h2>
+        </span>
     </div>
     <div class="col-sm-3" id="button_container">
     <button class="col-sm-6 button" id="previous">Previous</button>
@@ -90,6 +96,43 @@
         <td class="col-sm-1" id="residents_gender_x"></td>
     </tr>
 </table>
+
+<div id="registration_box" class="modal">
+        <div class="modal-content regbox">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class="col-sm-12" id="registration_form_header">Registration</h2>
+            </div>
+            <div class="modal-body">
+                <form class="col-sm-12 regform" id="registration_form">
+                    <p class="col-sm-6">
+                        Username:
+                    </p>
+                    <p class="col-sm-6">
+                        <input type="textarea" id="username">
+                    </p>
+                    <p class="col-sm-6">
+                        Password:
+                    </p>
+                    <p class="col-sm-6">
+                        <input type="password" id="password">
+                    </p>
+                    <p class="col-sm-6">
+                        Password again:
+                    </p>
+                    <p class="col-sm-6">
+                        <input type="password" id="password_check">
+                    </p>
+                </form>
+                    <div class="col-sm-12" id="regbuttons">
+                        <button id="save">Registration</button>
+                        <button id="cancel">Cancel</button>
+                    </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 

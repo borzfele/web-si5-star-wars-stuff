@@ -1,3 +1,20 @@
+.modal-content.regbox {
+    width: 40%;
+}
+
+.regform {
+    text-align: left;
+}
+
+#registration_box {
+    display: none;
+}
+
+#header span {
+    float: right;
+    text-align: right;
+}
+
 #modal_table_body {
     text-align: center;
 }
